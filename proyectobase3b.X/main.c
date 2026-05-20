@@ -37,8 +37,7 @@ while(1)
   AD1CON1bits.SAMP = 1;
   // delay(1);              // Ahora no es necesario porque
   //AD1CON1bits.SAMP = 0;   // pasa automaticamente a conversion
-  while (!finConversion)
-      ;
+  while (!finConversion);
   finConversion = 0;
   
   // Hacer algo con el valor en la variable ADCValue
