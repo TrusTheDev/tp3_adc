@@ -1,10 +1,10 @@
 #include "xc.h"
 
-void initPORTBE(void) {
+void initPORTDE(void) {
     AD1PCFGH = 0xFFFF;
     AD1PCFGL = 0xFFFF;
     
-    TRISB = 0xFFFF; //Configuro TRISB como entrada para controlar al robot
+    TRISD = 0xFFFF; //Configuro TRISB como entrada para controlar al robot
     TRISE = 0x0000; //Configuro como salida para mostrar el estado del robot
 }
 void initADC(void) {
@@ -36,7 +36,7 @@ void initDMA(void) {
 }
 
 void config(void) {
-    initPORTBE();
+    initPORTDE();
     initADC();
     initDMA();
 }
