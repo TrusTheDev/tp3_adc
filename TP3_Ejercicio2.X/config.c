@@ -18,7 +18,7 @@ void initADC(void) {
     AD1CON1bits.FORM = 1; // Entero signado
     
 }
-extern int temperaturas[6];
+extern int temperaturas[6] __attribute__((space(dma))); 
 void __attribute__((interrupt, auto_psv)) _DMA0Interrupt(void) {
     /* Rutina de atención para la interrupción del DMA */
     IFS0bits.DMA0IF = 0;
