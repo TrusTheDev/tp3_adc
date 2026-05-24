@@ -9,14 +9,14 @@
 #include "xc.h"
 #include "config.h"
 
-volatile int temperaturas[6] __attribute__((space(dma))); //arreglo especial 
+volatile unsigned int temperaturas[6] __attribute__((space(dma))); //arreglo especial 
 int aux;
 int cont;
 
 void up() {
 PORTEbits.RE0 = 1;
 //Analizo la muestra
-PORTE = (PORTE & 0x00FF) | (aux << 8); //Uso bitwise para desplazar aux a los 8 bits
+
 }
 
 void down() {
@@ -55,10 +55,6 @@ void release() {
 
 int main(void) {
     config();
-    AD1CON1bits.SAMP = 1;  // Empieza el muestreo
-    for(int i=0; i<1000; i++){
-        
-    }
     while (1) {
         /*
          * Agregar la lógica necesaria
