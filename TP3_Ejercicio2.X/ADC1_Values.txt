@@ -1,6 +1,6 @@
-00F5;  // Decimal: 245  -> Temp baja (~20°C si el sensor es lineal)
-0118;  // Decimal: 280  -> Sube un poco
-015E;  // Decimal: 350  -> Sube más rápido
-01A4;  // Decimal: 420  -> Sigue subiendo
-0213;  // Decimal: 531  -> Temperatura alta
-02B8;  // Decimal: 696  -> Temp muy alta o pico de calor (~68°C)
+00F5
+0118
+015E
+01A4
+0213
+02B8
