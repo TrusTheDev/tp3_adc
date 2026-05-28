@@ -46,7 +46,7 @@ int main(void) {
             }
             
             // Lógica del contador de ceros
-            if(valor_convertido == 0xF800){
+            if(valor_convertido == 0x0800){
                 contador_ceros++;
                 PORTE = contador_ceros;
             }
